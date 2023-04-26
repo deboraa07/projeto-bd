@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Piazzolla:wght@600&display=swap');
+
+#map {
+  width: 100%;
+  height: 100%;
+  float:left;
+}
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    /*flex-direction: column;*/
     background-color: #000B2D;
 }
 
@@ -28,7 +34,7 @@ body{
     margin-top: 20px;
 }
 .images{
-    display: flex;
+   display: flex;
    justify-content: space-around;
 }
 button{
@@ -41,6 +47,11 @@ button{
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+button a{
+  text-decoration: none;
+  color: white;
+}
+
 button:hover{
     box-shadow: 0 0 20px #A9A9A9;
 }
@@ -62,4 +73,11 @@ form{
    margin: 5% 0 0 10%;
    color: white;
    font-family: 'Montserrat', sans-serif;
+}
+
+      
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }

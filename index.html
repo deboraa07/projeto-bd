@@ -7,25 +7,25 @@
     <script src="assets/javascript/mapa.js"></script>
   </head>
   <body>
-    
+    <div id="map"></div>
       <div id="container">
         <div class="titulo">Cadastro de Evento Acadêmico</div>
         <form>
-        <input type="text" placeholder="Nome do Evento:">
-        <input type="text" placeholder="Local:">
-        <input type="text" placeholder="Organização:">
+        <input type="text" id="nome" placeholder="Nome do Evento:">
+        <input type="text" id="local" placeholder="Local:">
+        <input type="text" id="org" placeholder="Organização:">
 
-        <input type="date" placeholder="Data:">
-        <input type="time" placeholder="Hora:">
-        <input type="text" placeholder="Descrição:">  
+        <input type="date" id="data" placeholder="Data:">
+        <input type="time" id="hora" placeholder="Hora:">
+        <input type="text" id="desc" placeholder="Descrição:">  
         </form>
 
         <div class="images">
             <img src="assets/img/undraw_welcoming_re_x0qo 1.png" alt="imagem à esquerda">
           
-            <button class="button" onclick="salvar()"><a href="map.html">Cadastrar</a>
+            <button class="button" id="btn"><a>Cadastrar</a>
             </button>
-
+            
             <img src="assets/img/undraw_begin_chat_re_v0lw 1.png" alt="imagem à direita">
         </div>
 
@@ -37,5 +37,8 @@
       src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
       async
     ></script>
+
   </body>
 </html>
+
+

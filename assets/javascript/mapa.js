@@ -23,24 +23,31 @@ function initMap() {
       map.setCenter(marker.position);
   });
 
+  const botao = document.getElementById('btn');
+  botao.addEventListener('click', () => {
+    salvar(marker);
+})
 }
 
 function addMarker(evt){
     marker.setPosition(evt.latLng);
 }
 
-function salvar(){
+function salvar(marker){
 
     const obj = {
         nome: document.getElementById('nome').value,
+        descricao: document.getElementById('desc').value,
+        organizacao: document.getElementById('org').value,
+        hora: document.getElementById('hora').value,
+        local: document.getElementById('local').value,
         lat: marker.getPosition().lat(),
         lng: marker.getPosition().lng()
     };
 
-    fetch("http://localhost:3000/pontos",{
+    fetch("https://localhost:3000/pontos",{
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(obj)

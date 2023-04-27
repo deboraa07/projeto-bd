@@ -31,8 +31,12 @@ const Ponto = database.define('ponto',{
         type: Sequelize.DATE,
         allowNull: false
     },
-    geometria:{
-        type: Sequelize.GEOMETRY,
+    lat:{
+        type: Sequelize.FLOAT,
+        allowNull: false
+    },
+    lng:{
+        type: Sequelize.FLOAT,
         allowNull: false
     }
 });

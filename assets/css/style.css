@@ -42,7 +42,7 @@ button{
     border-radius: 72px;
     margin-top: 10%;
     height: 30px;
-    width: 15%;
+    width: 20%;
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -63,9 +63,20 @@ input{
     border-radius: 36px;
     width: 40%;
     height: 35px;
-    padding: 5px;
     margin: 5px;
     font-family: 'Montserrat', sans-serif;
+}
+#desc{
+   border: 0.5px solid white;
+   color: white;
+   background-color: transparent;
+   border-radius: 15px;
+   width: 40%;
+   padding: 5px;
+   margin: 5px;
+   font-family: 'Montserrat', sans-serif;
+   height: 100px;
+
 }
 input:hover{
     box-shadow: 0 0 20px #A9A9A9;

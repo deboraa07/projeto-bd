@@ -38,20 +38,19 @@ function salvar(marker){
     const obj = {
         nome: document.getElementById('nome').value,
         descricao: document.getElementById('desc').value,
-        organizacao: document.getElementById('org').value,
-        hora: document.getElementById('hora').value,
         local: document.getElementById('local').value,
         lat: marker.getPosition().lat(),
         lng: marker.getPosition().lng()
     };
 
-    fetch("https://localhost:3000/pontos",{
+    fetch("//localhost:3000/pontos",{
       method: 'POST',
       headers: {
+        'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(obj)
     }).then(response =>{alert('Salvo com sucesso')})
-    .catch(error => alert('Falha ao salvar!'));    
+      .catch(error => alert('Falha ao salvar!'));    
 
 }

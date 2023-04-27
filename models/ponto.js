@@ -15,20 +15,8 @@ const Ponto = database.define('ponto',{
         type: Sequelize.STRING,
         allowNull: false
     },
-    organizacao:{
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    hora:{
-        type: Sequelize.TIME,
-        allowNull: false
-    },
     local:{
         type: Sequelize.STRING,
-        allowNull: false
-    },
-    data:{
-        type: Sequelize.DATE,
         allowNull: false
     },
     lat:{

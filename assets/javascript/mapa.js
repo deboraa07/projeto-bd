@@ -33,7 +33,7 @@ function addMarker(evt){
     marker.setPosition(evt.latLng);
 }
 
-function salvar(marker){
+async function salvar(marker){
 
     const obj = {
         nome: document.getElementById('nome').value,
@@ -43,14 +43,26 @@ function salvar(marker){
         lng: marker.getPosition().lng()
     };
 
-    fetch("//localhost:3000/pontos",{
+    await fetch("//localhost:3003/pontos",{
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(obj)
-    }).then(response =>{alert('Salvo com sucesso')})
-      .catch(error => alert('Falha ao salvar!'));    
-
-}
+     });
+    if(document.getElementById('nome').value== "" ||document.getElementById('nome').value.length < 1)
+    {
+     alert( "Preencha campo NOME corretamente!" );
+    }
+    else if(document.getElementById('desc').value== "" ||document.getElementById('desc').value.length < 1)
+     {
+     alert( "Preencha campo DESCRIÇÃO corretamente!" );
+    }
+    else if(document.getElementById('local').value== "" ||document.getElementById('local').value.length < 1)
+    {
+     alert( "Preencha campo LOCAL corretamente!" );
+    }
+    else{
+      alert("Salvo com sucesso");
+    }};

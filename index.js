@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(cors());
-const port = 3000;
+const port = 3003;
 
 
 const pontoController = require('./controllers/PontoController.js');

@@ -2,13 +2,15 @@ const { request } = require('express');
 const Ponto = require('../models/ponto.js');
 
 const addPonto = async (req, res) =>{
+    const objeto = {
+        nome: req.body.nome,
+        descricao: req.body.descricao,
+        local: req.body.local,
+        lng: req.body.lng,
+        lat: req.body.lat
+    };
 
-    const nome = req.body.nome;
-    const geometria = {type: 'Point', coordinates:[req.body.lng, req.body.lat]}
-    
-    console.log(geometria);
-
-    const ponto = Ponto.build({nome, geometria});
+    const ponto = Ponto.build(objeto);
     ponto.save().then(()=>{
         res.status(200).send('Ponto salvo!');
     }).catch(err =>{
